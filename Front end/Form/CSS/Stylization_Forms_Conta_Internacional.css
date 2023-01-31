@@ -1,0 +1,591 @@
+:root {
+    --header-brackground: #0081ea;
+    --input-background: #D9D9D9;
+    --form-line-margin: 0px 13px 25px 0px;
+}
+
+* {
+    font-family: "Ubuntu", "Sans-serif";
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url('../Fonts/ubuntu-font-family-0.80/Ubuntu-R.ttf');
+
+}
+
+@font-face {
+    font-family: "Ubuntu Bold";
+    src: url('../Fonts/ubuntu-font-family-0.80/Ubuntu-B.ttf');
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.headerBackground {
+    margin: 0;
+    width: 100%;
+    height: 132px;
+    left: 0px;
+    top: 0px;
+    background: var(--header-brackground);
+}
+
+#header-div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 132px;
+    width: 100%;
+    max-width: 1920px;
+    box-sizing: border-box;
+    overflow: hidden;
+    vertical-align: middle;
+    padding: 0 20px;
+}
+
+#headerTitleDiv {
+        padding: 0px 60px;
+        box-sizing: border-box;
+        width: 77%;
+        line-height: 132px;
+}
+
+#headerTitle {
+    width: max-content;
+    height: min-content;
+    margin: 0;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 46px;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+
+#header-div a {
+    height: 100%;
+    width: 23%;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+#headerLogo {
+    margin: auto;
+    object-fit: cover;
+    height: 80%;
+    z-index: 2;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+main {
+    width: 80%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.form-segment {
+    position: relative;
+    padding-left: 5%;
+    margin-bottom: 120px;
+}
+
+form h4 {
+    position: relative;
+    left: -80px;
+    width: auto;
+    height: min-content;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+
+.hideButton {
+    margin-left: 8px;
+    border: none;
+    padding: none;
+    background: none;
+    height: fit-content;
+    vertical-align: middle;
+}
+
+.visibilityIndicator {
+    height: 40px;
+    vertical-align: middle;
+}
+
+form fieldset {
+    width: 100%;
+    padding: 60px 80px 60px 80px;
+    margin: auto 0;
+    border-radius: 70px;
+    border-width: 2px;
+    border-color: #535353c0;
+    border-style: solid;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.form-field {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin: 0 0 28px 0;
+    position: relative;
+}
+
+form label {
+    width: 220px;
+    height: 14px;
+    left: 160px;
+    top: 548px;
+    margin: 0 0 9px 10px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+form span {
+    position: absolute;
+    left: 3px;
+    top: 52px;
+    font-size: 15px;
+    color: #910a0a;
+    margin-left: 10px;
+    height: 13px;
+}
+
+form div.optional {
+    position: relative;
+    display: inline;
+}
+
+form p.popup {
+    position: absolute;
+    display: inline;
+}
+
+form div.optional p.popup {
+    right: -100px;
+    top: -17px;
+    z-index: 2;
+    height: min-content;
+    width: max-content;
+    margin: 0;
+    padding: 0 3px 0 3px;
+    border-radius: 5px;
+    background-color: #9e848f83;
+    font-size: 13px;
+    visibility: hidden;
+}
+
+form input {
+    min-width: 50px;
+    height: 2fr;
+    width: 100%;
+    border: none;
+    border-radius: 99px;
+    margin: 0;
+    padding: 4.5px 15px 4.5px 15px;
+    box-sizing: border-box;
+    background-color: var(--input-background);
+    font-family: "Ubuntu";
+    font-size: 17px;
+    margin-right: 25px;
+}
+
+form input:focus {
+    border: none;
+}
+
+form select {
+    min-width: 50px;
+    height: 2fr;
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    margin: 0;
+    padding: 4.5px 15px 4.5px 15px;
+    box-sizing: border-box;
+    background-color: var(--input-background);
+    font-family: "Ubuntu";
+    font-size: 17px;
+    margin-right: 25px;
+    transition:  all 0.1s ease-in-out;
+}
+
+form select:focus {
+    border-radius: 12px 12px 0 0;
+}
+
+form select option {
+    min-width: 50px;
+    height: 2fr;
+    width: 100%;
+    border: none;
+    border-radius: 99px;
+    margin: 0;
+    padding: 4.5px 15px 4.5px 15px;
+    box-sizing: border-box;
+    background-color: var(--input-background);
+    font-family: "Ubuntu";
+    font-size: 17px;
+    margin-right: 25px;
+}
+
+.no-margin-right {
+    margin-right: 0px;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background: black;
+    margin: 30px 4% 55px 4%;
+}
+
+.addedField {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.add-field {
+    width: 50%;
+    height: min-content;
+    margin: 0px 0 0 -20px;
+    font-size: 19px;
+}
+
+.remove-field {
+    width: 40%;
+    height: min-content;
+    margin: 20px 0 0 60%;
+    font-size: 19px;
+}
+
+.add-button {
+    margin-left: 7px;
+    border-width: 2px;
+    border-radius: 60%; 
+    height: 27.5px; 
+    width: 27.5px; 
+    font-size: 19.5px; 
+    font-weight: 500;
+    text-align: center;
+    background: #ffffff00;
+}
+
+.remove-button {
+    padding: 0px;
+    margin-left: 7px;
+    border-width: 2px;
+    border-radius: 60%; 
+    border-color: #c01111;
+    color: #c01111;
+    height: 27.5px; 
+    width: 27.5px; 
+    font-size: 16.5px; 
+    font-weight: 500;
+    text-align: center;
+    background: #ffffff00;
+}
+
+
+/* div Dados da Empresa */
+
+
+#field-Razao_Social {
+    width: 65%;
+}
+
+#field-CNPJ-TAX_ID {
+    width: 35%;
+}
+
+#field-CEP-PO_BOX {
+    width: 24%;
+}
+
+#field-Pais {
+    width: 38%;
+}
+
+#field-Pais_De_Constituicao {
+    width: 38%;
+}
+
+#field-Estado {
+    width: 20%;
+}
+
+#field-Cidade {
+    width: 26%;
+}
+
+#field-Numero {
+    width: 17%;
+}
+
+#field-Complemento {
+    width: 37%;
+}
+
+#field-Local_Dos_Escritorios_Principais_Da_Empresa {
+    width: 50%;
+}
+
+#field-Pessoa_De_Contato {
+    width: 50%;
+}
+
+#field-Email_Empresa {
+    width: 47%;
+}
+
+#field-DDI_Empresa {
+    width: 12%;
+}
+
+#field-Telefone_Empresa {
+    width: 22%;
+}
+
+#field-Ramal {
+    width: 19%;
+}
+
+
+/* div Limite Operacional */
+
+#LO_Field {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.LO_Mes {
+    width: 25%;
+}
+
+.LO_Valor {
+    width: 60%;
+}
+
+.LO_remove_button {
+    vertical-align: middle;
+    position: relative;
+    top: 24px;
+}
+
+.unfocusable {
+    opacity: 50%;
+}
+
+.unfocusable:hover {
+    cursor: not-allowed;
+}
+
+/* div Contarparte e Finalidades */
+
+#ContrapartesFinalidades_Field {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: min-content;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.PF-PJ {
+    width: 30%;
+}
+
+.Contraparte {
+    width: 70%;
+}
+
+.Finalidade {
+    width: 75%
+}
+
+/* div Tarifas */
+
+#fieldset-Tarifas {
+    justify-content: center;
+}
+
+.tarifaDiv {
+    width: 47%;
+    margin: 10px;
+    display: flex;
+}
+
+.tarifaDiv table {
+    border: 2px solid #000000;
+    border-radius: 0 0 20px 20px;
+    margin: auto;
+    box-sizing: border-box;
+    width: 90%;
+    height: 100px;
+}
+
+.tarifaDiv table caption {
+    text-align: center;
+    background-color: #46de9c;
+    font-size: large;
+    font-weight: 600;
+    color: #fff8f8;
+    padding: 5px;
+    border-radius: 20px 20px 0 0;
+}
+
+/* div Representante Legal */
+
+
+#div-RepresentanteLegal .field-Nome {
+    width: 36%;
+}
+
+#div-RepresentanteLegal .field-Sobrenome {
+    width: 38%;
+}
+
+#div-RepresentanteLegal .field-CPF {
+    width: 26%;
+}
+
+#div-RepresentanteLegal .field-Email {
+    width: 60%;
+}
+
+#div-RepresentanteLegal .field-Cargo {
+    width: 40%;
+}
+
+#div-RepresentanteLegal .field-DDI {
+    width: 13%;
+}
+
+#div-RepresentanteLegal .field-Telefone {
+    width: 22%;
+}
+
+/* div Master do canal */
+
+#div-MasterDoCanal .field-Nome {
+    width: 36%;
+}
+
+#div-MasterDoCanal .field-Sobrenome {
+    width: 38%;
+}
+
+#div-MasterDoCanal .field-CPF {
+    width: 26%;
+}
+
+#div-MasterDoCanal .field-Email {
+    width: 60%;
+}
+
+#div-MasterDoCanal .field-Cargo {
+    width: 40%;
+}
+
+#div-MasterDoCanal .field-DDI {
+    width: 13%;
+}
+
+#div-MasterDoCanal .field-Telefone {
+    width: 22%;
+}
+
+/**/
+
+#buttonSendDiv {
+    width: min-content;
+    height: min-content;
+    margin: -50px auto 50px auto;
+}
+
+#buttonSend {
+    float: center;
+    width: fit-content;
+    height: min-content;
+    padding: 13px;
+    font-family: "Ubuntu Bold";
+    font-size: 16px;
+    border-radius: 60px;
+    background-color: #ffffff4f;
+    transition: all 0.2s ease-in-out;
+}
+
+#buttonSend:hover {
+    transform: scale(1.1);
+}
+
+#footerBackground {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    height: 110px;
+    padding: 20px;
+    background: #b43131;
+    box-sizing: border-box;
+}    
+
+#footerText {
+}
+
+button:hover, select:hover, object:hover {
+    cursor: pointer;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity:0 ;}
+}

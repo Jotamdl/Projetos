@@ -1,0 +1,183 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registraton forms</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title"> Error Feedback </h1>
+    <p id="description"> Please, use this space to inform us about any kind of problem that you may have experienced</p>
+  <hr>
+    <form id="survey-form" action='https://register-demo.freecodecamp.org'>
+      <fieldset id="fieldset1">
+        <legend> Your contact informations</legend>
+        <label id="name-label">First Name: <input id="name" type="text" name="name" placeholder="Ex. João Hugo" required/></label>
+        <label id="name-label">Second Name: <input id="name" type="text" name="name" placeholder="Ex. Martins da Luz" required/></label>
+        <label id="email-label">E-mail: <input id="email" type="email" name="email" placeholder="Ex. joaohugomartinsdaluz@gmail.com"  required/></label>
+        <label id="number-label">Age: <input id="number" type="number" name="number" min="13" max="120" placeholder="Ex. 20" required/></label>
+      </fieldset>
+      <fieldset id="fieldset2">
+        <legend> Problem type </legend>
+        <label class="problem-type-label"> How many times has it happend before?
+          <select id="dropdown" name="occurrences" >
+            <option value=""> Select an option </option>
+            <option value="1"> First time </option>
+            <option value="2"> Second time </option>
+            <option value="3"> Third time or more </option>
+          </select>
+        </label>
+        <label class="problem-type-label"> How serius was the error ? 
+          <label class="problem-level" ><input type="radio" name="problem-level" value="high" /> Caused me serious harm </label>
+          <label class="problem-level" ><input type="radio" name="problem-level" value="medium" /> Problematic but not harmfull </label>
+          <label class="problem-level" ><input type="radio" name="problem-level" value="low" /> Minor inconvenience </label>
+        </label>
+        <label class="problem-type-label"> Wich of our services was affected by the error ?
+          <label class="checkbox-label"><input type="checkbox" name="Service_Affected" value="website"/> Website</label>
+          <label class="checkbox-label"><input type="checkbox" name="Service_Affected" value="app"/> Desktop App</label>
+        </label>
+      </fieldset id="fieldset3">
+      <fieldset>
+        <legend> Problem Description (optional) </legend>
+        <label> Descibre what exactly happend: 
+          <textarea name="" rows="5" cols="30" placeholder="Ex. My program was suddenly interrupted when I..." ></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body, html {
+  margin: 0px;
+}
+
+body {
+  background: rgb(220, 98, 71);
+  margin: auto;
+  width: 100%;
+}
+
+form {
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 70px;
+  width: 75%;
+  max-width: 600px;
+  background: rgb(73, 58, 58);
+  padding: 30px 60px;
+  border-radius: 30px;
+}
+
+fieldset {
+  border-radius: 20px;
+  padding: 20px;
+  margin: 15px 0;
+  border-color: rgb(181, 164, 164);
+}
+
+hr:first-of-type {
+  width: 77%;
+  height: 2px;
+  margin: auto;
+  background: rgb(181, 164, 164);
+  border: none;
+  border-radius: 20000px;
+}
+
+legend {
+  font-family: ubuntu;
+  font-style: bold;
+  color: rgb(181, 164, 164)
+}
+
+h1, p {
+  text-align: center;
+  font-family: ubuntu;
+  font-style: bold;
+  margin-top: 30px;
+  margin-bottom: 7px;
+}
+
+p {
+  margin: 0 15%;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  font-family: ubuntu;
+  color: rgb(237, 212, 208);
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+  font-family: ubuntu;
+  width: 100%;
+  margin-top: 7px;
+  margin-bottom: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: none;
+}
+
+input[type="checkbox"] {
+  margin-left: 30px;
+}
+
+input[type="submit"] {
+  height: 30px;
+  width: 80px;
+  display: block;
+  border: solid;
+  border-color: rgb(184, 166, 166);
+  border-radius: 20px;
+  margin: auto;
+  font-family: ubuntu;
+  font-style: bold;
+}
+
+select {
+  font-family: ubuntu;
+  border-radius: 10px;
+  padding: 2px 4px;
+}
+
+.problem-level {
+  color: rgb(243, 233, 231);
+  margin: 5px 0;
+  margin-left: 30px;
+}
+
+.problem-type-label:first-of-type {
+  margin-top: unset;
+}
+
+.problem-type-label {
+   margin-top: 9px;
+ }
+
+.checkbox-label {
+  color: rgb(243, 233, 231);
+  margin: 5px 0;
+  margin-left: 6.5px;
+}
+
+textarea {
+  font-family: ubuntu;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 14px;
+}
+
+
+** end of undefined **
+

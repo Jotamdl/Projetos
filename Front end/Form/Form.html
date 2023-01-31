@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Formulário de Conta Internacional</title>
+        <meta name="description" content="Formulário para registro de Conta Internacional">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href=".\CSS\Stylization_Forms_Conta_Internacional.css"> 
+    </head>
+
+
+    <body>
+
+        <header class="headerBackground">
+            <div id="header-div">
+                <div id="headerTitleDiv">
+                    <h1 id="headerTitle"> Conta World Bank </h1>
+                </div>
+                <img id="headerLogo" src="Images/world-financial.png" alt="World Bank Logo">
+            </div>
+        </header>
+
+        <main>
+
+            <form action=".\JS\Scripts_Forms_Conta_Internacional.js" method="post">
+
+                <script>
+                    const dadosCliente = {};
+
+                    function getValue(Field, InputID) {
+
+                        if (dadosCliente[`${Field}`] === undefined) {
+                            dadosCliente[`${Field}`] = {};
+                        }
+
+                        dadosCliente[`${Field}`][`${InputID}`] = document.getElementById(`${InputID}`).value;
+                    }
+
+                    function getPlusValue(Field, FieldNumber, InputID) {
+
+                        if (dadosCliente[`${Field}`] === undefined) {
+                            dadosCliente[`${Field}`] = {};
+                        }
+
+                        if (dadosCliente[`${Field}`][`${FieldNumber}`] === undefined) {
+                            dadosCliente[`${Field}`][`${FieldNumber}`] = {};
+                        }
+
+                        dadosCliente[`${Field}`][`${FieldNumber}`][`${InputID}`] = document.getElementById(`${InputID}`).value;
+                    }
+
+                    function getLoValue(Field, MesID, InputID) {
+
+                        if (dadosCliente[`${Field}`] === undefined) {
+                            dadosCliente[`${Field}`] = {};
+                        }
+
+                        dadosCliente[`${Field}`][document.getElementById(`${MesID}`).value] = document.getElementById(`${InputID}`).value;
+                    }
+
+                    function hide(targetId) {
+
+                        let field = document.getElementById(targetId);
+                        let visibilityIcon = document.getElementById(`${targetId}-visibilityIndicator`);
+
+                        if (field.style.display === "none") {
+                            field.style.animation = "fadeIn 0.3s";
+                            field.style.display = "flex";
+                            visibilityIcon.setAttribute("src","Images/visible.png");
+                        } else {
+                            field.style.animation = "fadeOut 0.3s";
+                            setTimeout(()=>{field.style.display = "none"}, 200)
+                            visibilityIcon.setAttribute("src","Images/hidden.png");
+                        }
+                    }
+
+                </script>
+
+                <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+                <!--  CAMPO DADOS DA EMPRESA  -->
+
+                <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+                <div id="div-DadosDaEmpresa" class="form-segment">
+                
+                    <h4 id="DadosDaEmpresa-header">Dados da Empresa 
+                        <button type="button" class="hideButton" onclick="hide('fieldset-DadosDaEmpresa')">
+                            <img src="Images/visible.png" id="fieldset-DadosDaEmpresa-visibilityIndicator" class="visibilityIndicator" aria-hidden="true">
+                        </button>
+                    </h4> 
+
+                    <fieldset id="fieldset-DadosDaEmpresa" class="fieldset" id="fieldset">
+                         
+                        <div id="field-Razao_Social" class="form-field">
+                            <label id="DadosDaEmpresa-label-Razao_Social" for="Razao_Social">Razão Social</label>
+                            <span></span>
+                            <input name="Razao_Social" id="Razao_Social" class="basicInput" type="text" onblur="getValue('Dados da Empresa', 'Razao_Social')" required>
+                        </div>
+
+                        <div id="field-CNPJ-TAX_ID" class="form-field">
+                            <label id="DadosDaEmpresa-label-CNPJ-TAX_ID" for="CNPJ-TAX_ID">CNPJ / TAX ID</label>
+                            <span></span>
+                            <input name="CNPJ-TAX_ID" id="CNPJ-TAX_ID" class="no-margin-right cnpjInput" type="text" onblur="getValue('Dados da Empresa', 'CNPJ-TAX_ID')" required>
+                        </div>
+
+                        <div id="field-CEP-PO_BOX" class="form-field">
+                            <label id="DadosDaEmpresa-label-CEP-PO_BOX" for="CEP-PO_BOX">CEP / P.O. BOX</label> 
+                            <span></span>
+                            <input name="CEP-PO_BOX" id="CEP-PO_BOX" class="cepInput" type="text" onblur="getValue('Dados da Empresa', 'CEP-PO_BOX')"required>
+                        </div>
+
+                        <div id="field-Pais" class="form-field">
+                            <label id="DadosDaEmpresa-label-Pais" for="Pais">País</label> 
+                            <span></span>
+                            <select name="Pais" id="Pais" class="country" type="text" onblur="getValue('Dados da Empresa', 'Pais')" required></select>
+                        </div>
+
+                        <div id="field-Pais_De_Constituicao" class="form-field">
+                            <label id="DadosDaEmpresa-label-Pais_De_Constituicao" for="Pais_De_Constituicao">País de Constituição</label> 
+                            <span></span>
+                            <select name="Pais_De_Constituicao" id="Pais_De_Constituicao" class="no-margin-right country" type="text" onblur="getValue('Dados da Empresa', 'Pais_De_Constituicao')" required></select>
+                        </div>
+
+                        <div id="field-Estado" class="form-field">
+                            <label id="DadosDaEmpresa-label-Estado" for="Estado">Estado</label> 
+                            <span></span>
+                            <input name="Estado" id="Estado" class="basicInput" type="text" onblur="getValue('Dados da Empresa', 'Estado')" required>
+                        </div>
+
+                        <div id="field-Cidade" class="form-field">
+                            <label id="DadosDaEmpresa-label-Cidade" for="Cidade">Cidade</label>  
+                            <span></span>
+                            <input name="Cidade" id="Cidade" class="basicInput" type="text" onblur="getValue('Dados da Empresa', 'Cidade')" required>
+                        </div>
+
+                        <div id="field-Numero" class="form-field">
+                            <label id="DadosDaEmpresa-label-Numero" for="Numero">Número</label> 
+                            <span></span>
+                            <input name="Numero" id="Numero" class="numberInput basicInput" type="text" onblur="getValue('Dados da Empresa', 'Numero')" required>
+                        </div>    
+
+                        <div id="field-Complemento" class="form-field">
+                            <label id="DadosDaEmpresa-label-Complemento" for="Complemento">Complemento<div class="optional"> * <p id="popup" class="popup">campo opcional</p></div></label> 
+                            <input name="Complemento" id="Complemento" class="no-margin-right basicInput" type="text" onblur="getValue('Dados da Empresa', 'Complemento')">
+                        </div>
+
+                        <div id="field-Local_Dos_Escritorios_Principais_Da_Empresa" class="form-field">
+                            <label id="DadosDaEmpresa-label-Local_Dos_Escritorios_Principais_Da_Empresa" for="Local_Dos_Escritorios_Principais_Da_Empresa">Local dos escritórios principais da empresa</label> 
+                            <span></span>
+                            <select name="Local_Dos_Escritorios_Principais_Da_Empresa" id="Local_Dos_Escritorios_Principais_Da_Empresa" class="country" type="text" onblur="getValue('Dados da Empresa', 'Local_Dos_Escritorios_Principais_Da_Empresa')" required></select>
+                        </div>
+
+                        <div id="field-Pessoa_De_Contato" class="form-field">
+                            <label id="DadosDaEmpresa-label-Pessoa_De_Contato" for="Pessoa_De_Contato">Pessoa de contato</label> 
+                            <span></span>
+                            <input name="Pessoa_De_Contato" id="Pessoa_De_Contato" class="no-margin-right basicInput" type="text" onblur="getValue('Dados da Empresa', 'Pessoa_De_Contato')" required>
+                        </div>
+
+                        <div id="field-Email_Empresa" class="form-field">  
+                            <label id="DadosDaEmpresa-label-Email_Empresa" for="Email_Empresa">E-mail</label> 
+                            <span></span>
+                            <input name="Email_Empresa" id="Email_Empresa" class="emailStaticInput" type="email" onblur="getValue('Dados da Empresa', 'Email_Empresa')" required>
+                        </div>
+
+                        <div id="field-DDI_Empresa" class="form-field">
+                            <label id="DadosDaEmpresa-label-DDI_Empresa" for="DDI_Empresa">DDI</label> 
+                            <span></span>
+                            <input name="DDI_Empresa" id="DDI_Empresa" class="ddiInput basicInput" type="text" onblur="getValue('Dados da Empresa', 'DDI_Empresa')" required>
+                        </div>
+
+                        <div id="field-Telefone_Empresa" class="form-field">
+                            <label id="DadosDaEmpresa-label-Telefone_Empresa" for="Telefone_Empresa">Telefone</label> 
+                            <span></span>
+                            <input name="Telefone_Empresa" id="Telefone_Empresa" class="telephoneNumberInput cellphoneStaticInput" type="text" onblur="getValue('Dados da Empresa', 'Telefone_Empresa')" required>
+                        </div>
+
+                        <div id="field-Ramal" class="form-field">
+                            <label id="DadosDaEmpresa-label-Ramal" for="Ramal">Ramal</label>
+                            <span></span>
+                            <input name="Ramal" id="Ramal" class="no-margin-right telephoneNumberInput cellphoneStaticInput" type="text" onblur="getValue('Dados da Empresa', 'Ramal')" required>
+                        </div>
+
+                        <script>
+
+                            const PAISES = ["","África do Sul", "Afeganistão", "Albânia", "Alemanha", "Andorra", "Angola", "Antígua e Barbuda", "Arábia Saudita", "Argélia", "Argentina", "Armênia", "Austrália", 
+                                            "Áustria", "Azerbaijão", "Bahamas", "Bangladesh", "Barbados", "Barein", "Belarus", "Bélgica", "Belize", "Benin", "Bolívia", "Bósnia-Herzegovina", "Botsuana", "Brasil", 
+                                            "Brunei", "Bulgária", "Burkina Fasso", "Burundi", "Butão", "Cabo Verde", "Camarões", "Camboja", "Canadá", "Catar", "Cazaquistão", "Chade", "Chile", "China", "Chipre", 
+                                            "Cingapura", "Colômbia", "Comores", "Congo", "Coreia do Norte", "Coreia do Sul", "Costa do Marfim", "Costa Rica", "Croácia", "Cuba", "Dinamarca", "Djibuti", "Dominica", 
+                                            "Egito", "El Salvador", "Emirados Árabes Unidos", "Equador", "Eritreia", "Eslováquia", "Eslovênia", "Espanha", "Estados Unidos", "Estônia", "Etiópia", "Fiji", "Filipinas", 
+                                            "Finlândia", "França", "Gabão",  "Gâmbia", "Gana", "Geórgia", "Granada", "Grécia", "Guatemala", "Guiana", "Guiné", "Guiné-Bissau", "Guiné-Equatorial", "Haiti", "Honduras", 
+                                            "Hungria", "Iêmen", "Ilhas Marshall", "Ilhas Salomão", "Índia", "Indonésia", "Irã", "Iraque", "Irlanda", "Islândia", "Israel", "Itália", "Jamaica", "Japão", "Jordânia", 
+                                            "Kiribati", "Kuwait", "Laos", "Lesoto", "Letônia", "Líbano", "Libéria", "Líbia", "Liechtenstein", "Lituânia", "Luxemburgo", "Macedônia", "Madagáscar", "Malásia", "Malauí", 
+                                            "Maldivas", "Mali", "Malta", "Marrocos", "Maurício", "Mauritânia", "México", "Micronésia", "Moçambique", "Moldávia", "Mônaco", "Mongólia", "Montenegro", "Myanmar", 
+                                            "Namíbia", "Nauru", "Nepal", "Nicarágua", "Níger", "Nigéria", "Noruega", "Nova Zelândia", "Omã", "Países Baixos", "Palau", "Panamá", "Papua Nova Guiné", "Paquistão", 
+                                            "Paraguai", "Peru", "Polônia", "Portugal", "Quênia", "Quirguistão", "Quirguistão", "Reino Unido", "República Centro-Africana", "República Democrática do Congo", 
+                                            "República Dominicana", "República Tcheca", "Romênia", "Ruanda", "Rússia", "Samoa", "San Marino", "Santa Lúcia", "São Cristóvão e Névis", "São Tomé e Príncipe", 
+                                            "São Vicente e Granadinas", "Seicheles", "Senegal", "Serra Leoa", "Sérvia", "Síria", "Somália", "Sri Lanka", "Suazilândia", "Sudão", "Sudão do Sul", "Suécia", "Suíça", 
+                                            "Suriname", "Tadjiquistão", "Tailândia", "Tanzânia", "Timor-Leste", "Togo", "Tonga", "Trinidad e Tobago", "Tunísia", "Turcomenistão", "Turquia", "Tuvalu, Ucrânia", 
+                                            "Uganda", "Uruguai", "Uzbequistão", "Vanuatu", "Venezuela", "Vietnã"," Zâmbia", "Zimbábue"];
+                            
+                            let paisFields = document.querySelectorAll(".country")
+
+                            for (let paisField of paisFields) {
+
+                                for (pais in PAISES) {
+
+                                    let opt = document.createElement("option");
+                                    opt.setAttribute("value", `${PAISES[pais]}`);
+                                    opt.textContent = PAISES[pais];
+
+                                    paisField.appendChild(opt)
+                                }
+
+                            }
+
+                            function optionalFieldPopup() {
+                                let popup = document.getElementById("popup");
+                                popup.style.visibility = "visible";
+                                popup.style.animation = "fadeIn 0.5s";
+                            }
+
+                            function optionalFieldPopupOff() {
+                                let popup = document.getElementById("popup");
+                                popup.style.animation = "fadeOut 0.5s";
+                                setTimeout(()=>{popup.style.visibility = "hidden"}, 150)
+                            }
+
+                            let optionalField = document.querySelector(".optional");
+                            optionalField.parentNode.addEventListener('mouseover', optionalFieldPopup, false);
+                            optionalField.parentNode.addEventListener('mouseout', optionalFieldPopupOff, false);
+                            
+                        </script>
+
+                    </fieldset>
+                </div>
+
+                <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+                <!--  CAMPO LIMITE OPERACIONAL  -->
+
+                <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+                <div id="div-LimiteOperacional" class="form-segment">
+                    <h4 id="LimiteOperacional-header">Limite Operacional 
+                        <button type="button" class="hideButton" onclick="hide('fieldset-LimiteOperacional')">
+                            <img src="Images/visible.png" id="fieldset-LimiteOperacional-visibilityIndicator" class="visibilityIndicator" aria-hidden="true">
+                        </button>
+                    </h4>
+
+                    <fieldset id="fieldset-LimiteOperacional" class="fieldset">
+                        
+                        <div id="LO_Field">
+
+                            <div id="LimiteOperacional-field-Mes" class="form-field LO_Mes">
+                                <label for="LimiteOperacional-Mes_1">Mês</label>
+                                <span></span>
+                                <select name="LimiteOperacional-Mes_1" id="LimiteOperacional-Mes_1" onblur="setValorFieldFocusAvailability('LimiteOperacional-Mes_1','LimiteOperacional-Valor_1')" required>
+                                    <option value="">Selecione o Mês</option>
+                                    <option value="Jan">Janeiro</option>
+                                    <option value="Feb">Fevereiro</option>
+                                    <option value="Mar">Março</option>
+                                    <option value="Apr">Abril</option>
+                                    <option value="May">Maio</option>
+                                    <option value="Jun">Junho</option>
+                                    <option value="Jul">Julho</option>
+                                    <option value="Aug">Agosto</option>
+                                    <option value="Sep">Setembro</option>
+                                    <option value="Oct">Outubro</option>
+                                    <option value="Nov">Novembro</option>
+                                    <option value="Dez">Dezembro</option>
+                                </select>
+                            </div>
+
+                            <div id="LimiteOperacional-field-Valor_1" class="form-field LO_Valor">
+                                <label for="LimiteOperacional-Valor_1">Valor</label>
+                                <span></span>
+                                <input name="LimiteOperacional-Valor_1" id="LimiteOperacional-Valor_1" class="no-margin-right numericValueInput basicInput" type="text" class="no-margin-right" maxlength="18" onblur="getLoValue('Limite Operacional', 'LimiteOperacional-Mes_1', 'LimiteOperacional-Valor_1')">
+                            </div>
+
+                        </div>    
+
+                        <div id="add-LimiteOperacional-div" class="add-field">
+                            Adicionar Limite Operacional 
+                            <button id="add-LimiteOperacional-button" class="add-button" onClick="addLimiteOperacional()" type="button"> + </button>
+                        </div>
+
+                        <script>
+
+                            // set a copy of the button element
+                            let addDivLimiteOperacional = document.getElementById("add-LimiteOperacional-div");
+                            let newAddDivLimiteOperacional = addDivLimiteOperacional.cloneNode(true);
+
+                            // set counter
+                            let LimiteOperacional_fieldCount = 1;
+
+                            function addLimiteOperacional() {
+                                
+                                if (LimiteOperacional_fieldCount >= 12) {
+                                    alert("Numero Máximo de campos de Limite Operacional atingido")
+                                    return
+                                }
+                                
+                                LimiteOperacional_fieldCount++;
+                                
+                                // set new field
+                                let newField = document.createElement("div");
+                                newField.setAttribute("class","addedField");
+                                newField.setAttribute("id",`added_LimiteOperacional_Field_${LimiteOperacional_fieldCount}`);
+
+                                // set mes field
+                                let mesDiv = document.createElement("div");
+                                mesDiv.classList.add("form-field", "LO_Mes");
+
+                                let mesLabel = document.createElement("label");
+                                mesLabel.textContent = "Mês ";
+
+                                let mes = document.getElementById("LimiteOperacional-Mes_1").cloneNode(true);
+                                mes.setAttribute("id",`LimiteOperacional-Mes_${LimiteOperacional_fieldCount}`);
+                                mes.setAttribute("onblur",`setValorFieldFocusAvailability('LimiteOperacional-Mes_${LimiteOperacional_fieldCount}','LimiteOperacional-Valor_${LimiteOperacional_fieldCount}')`)
+                                mes.addEventListener("change", unfocus, false);
+
+                                mesDiv.appendChild(mesLabel);
+                                mesDiv.appendChild(mes);
+
+                                // set valor field
+                                let valorDiv = document.createElement("div");
+                                valorDiv.classList.add("form-field", "LO_Valor");
+
+                                let valorLabel = document.createElement("label");
+                                valorLabel.textContent = "Valor ";
+                                valorLabel.setAttribute("for",`LimiteOperacional-Valor_${LimiteOperacional_fieldCount}`);
+
+                                let valorSpan = document.createElement("span");
+
+                                let valor = document.createElement("input");
+                                valor.setAttribute("name",`LimiteOperacional-Valor_${LimiteOperacional_fieldCount}`); 
+                                valor.setAttribute("id",`LimiteOperacional-Valor_${LimiteOperacional_fieldCount}`); 
+                                valor.setAttribute("type","text"); 
+                                valor.classList.add("no-margin-right", "unfocusable");
+                                valor.setAttribute("maxlength","18");
+                                valor.setAttribute("onblur",`getLoValue('Limite Operacional', 'LimiteOperacional-Mes_${LimiteOperacional_fieldCount}', 'LimiteOperacional-Valor_${LimiteOperacional_fieldCount}')`);
+                                valor.setAttribute('tabindex', '-1');
+                                valor.addEventListener('focus', preventFocus, false);
+                                valor.addEventListener("input", handleNumericInput, false);
+                                valor.addEventListener('blur', checkEmpty, false);
+
+                                valorDiv.appendChild(valorLabel);
+                                valorDiv.appendChild(valor);
+                                valorDiv.appendChild(valorSpan);
+                                valor.parentElement.classList.add("unfocusable");
+
+                                // set remove button
+                                let removeButton = document.createElement("button");
+                                removeButton.textContent = " x ";
+                                removeButton.setAttribute("type","button");
+                                removeButton.setAttribute("id", `remove-LimiteOperacional-button_${LimiteOperacional_fieldCount}`);
+                                removeButton.classList.add("remove-button", "LO_remove_button");
+                                removeButton.setAttribute("onClick", `removeLimiteOperacional(${LimiteOperacional_fieldCount}, ${document.getElementById(`LimiteOperacional-Mes_${LimiteOperacional_fieldCount}`)})`);
+
+                                // remove old add button
+                                document.getElementById("add-LimiteOperacional-div").remove();
+
+                                // Append MesDiv to the form
+                                newField.appendChild(mesDiv);
+
+                                // Append ValorDiv to the form
+                                newField.appendChild(valorDiv);
+
+                                // Append remove button
+                                newField.appendChild(removeButton);
+
+                                // Append new field
+                                document.getElementsByTagName("fieldset")[1].appendChild(newField);
+                                
+                                // Append add button
+                                document.getElementsByTagName("fieldset")[1].appendChild(newAddDivLimiteOperacional);
+                            }
+
+                            function removeLimiteOperacional(LimiteOperacional_fieldNumber, targetMonth) {
+                                console.log(LimiteOperacional_fieldCount)
+                                LimiteOperacional_fieldCount = LimiteOperacional_fieldCount - 1
+                                console.log(LimiteOperacional_fieldCount)
+                                document.getElementById(`remove-LimiteOperacional-button_${LimiteOperacional_fieldNumber}`).remove();
+                                document.getElementById(`added_LimiteOperacional_Field_${LimiteOperacional_fieldNumber}`).remove();
+                                
+                            }
+
+                        </script>
+
+                    </fieldset>
+
+                </div>
+
+                <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+                <!--  CAMPO CONTRAPARTES E FINALIDADES  -->
+
+                <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+                <div id="div-ContrapartesFinalidades" class="form-segment">
+                    <h4 id="ContrapartesFinalidades-header">Contrapartes e Finalidades 
+                        <button type="button" class="hideButton" onclick="hide('fieldset-ContrapartesFinalidades')">
+                            <img src="Images/visible.png" id="fieldset-ContrapartesFinalidades-visibilityIndicator" class="visibilityIndicator" aria-hidden="true">
+                        </button>
+                    </h4>
+
+                    <fieldset id="fieldset-ContrapartesFinalidades" class="fieldset">
+                        
+                        <div id="ContrapartesFinalidades_Field">
+
+                            <div id="ContrapartesFinalidades-field-Pessoa_Juridica_Fisica" class="form-field PF-PJ">
+                                <label for="Pessoa_Juridica_Fisica_1">Pessoa Fisica / Jurídica</label>
+                                <span></span>
+                                <select name="Pessoa_Juridica_Fisica_1" id="Pessoa_Juridica_Fisica_1" onblur="getPlusValue('Contrapartes e Finalidades', 1, 'Pessoa_Juridica_Fisica_1')" required>
+                                    <option value="Pessoa_Juridica">Pessoa Jurídica</option>
+                                    <option value="Pessoa_Fisica">Pessoa Física</option>
+                                </select>
+                            </div>
+
+                            <div id="ContrapartesFinalidades-field-Contraparte" class="form-field Contraparte">
+                                <label for="ContrapartesFinalidades-Contraparte_1">Contraparte</label>
+                                <span></span>
+                                <input name="ContrapartesFinalidades-Contraparte_1" id="ContrapartesFinalidades-Contraparte_1" type="text" class="no-margin-right basicInput" onblur="getPlusValue('Contrapartes e Finalidades', 1, 'ContrapartesFinalidades-Contraparte_1')" required>
+                            </div>
+
+                            <div id="ContrapartesFinalidades-field-Finalidade" class="form-field Finalidade">
+                                <label for="ContrapartesFinalidades-Finalidade_1">Finalidade</label>
+                                <span></span>
+                                <input name="ContrapartesFinalidades-Finalidade_1" id="ContrapartesFinalidades-Finalidade_1" type="text" class="no-margin-right basicInput" onblur="getPlusValue('Contrapartes e Finalidades', 1, 'ContrapartesFinalidades-Finalidade_1')" required>
+                            </div>
+                        </div>
+
+                        <div class="separator"></div>
+
+                        <div id="add-ContrapartesFinalidades-div" class="add-field">
+                            Adicionar Contraparte 
+                            <button id="add-ContrapartesFinalidades-button" class="add-button" onClick="addContrapartesFinalidades()" type="button"> + </button>
+                        </div>
+
+                        <script>
+                            
+                            // set a copy of the button element
+                            let addDivContrapartesFinalidades = document.getElementById("add-ContrapartesFinalidades-div");
+                            let newAddDivContrapartesFinalidades = addDivContrapartesFinalidades.cloneNode(true);
+
+                            // set counter
+                            let ContrapartesFinalidades_fieldCount = 1;
+
+                            function addContrapartesFinalidades() {
+                                
+                                ContrapartesFinalidades_fieldCount++;
+ 
+                                // set new field
+                                let newField = document.createElement("div");
+                                newField.setAttribute("class","addedField");
+                                newField.setAttribute("id",`added_ContrapartesFinalidades_Field_${ContrapartesFinalidades_fieldCount}`);
+
+                                // set separator
+                                let separator = document.createElement("div");
+                                separator.setAttribute("class","separator");
+                                separator.style.width = "100%";
+                                separator.style.height = "1px";
+                                separator.style.background = "black";
+                                separator.style.margin = "30px 4% 55px 4%";
+
+                                // set Client type field
+                                let pfpjDiv = document.createElement("div");
+                                pfpjDiv.classList.add("form-field", "PF-PJ");
+
+                                let pfpjLabel = document.createElement("label");
+                                pfpjLabel.textContent = "Pessoa Fisica / Jurídica ";
+
+                                let pfpj = document.getElementById("Pessoa_Juridica_Fisica_1").cloneNode(true);
+                                pfpj.setAttribute("id",`Pessoa_Juridica_Fisica_${ContrapartesFinalidades_fieldCount}`);
+                                pfpj.setAttribute("onblur", `getPlusValue('Contrapartes e Finalidades', ${ContrapartesFinalidades_fieldCount}, 'Pessoa_Juridica_Fisica_${ContrapartesFinalidades_fieldCount}')`);
+                                pfpj.addEventListener("change", unfocus, false);
+
+                                pfpjDiv.appendChild(pfpjLabel);
+                                pfpjDiv.appendChild(pfpj);
+
+                                // set Counterparty field
+                                let contraparteDiv = document.createElement("div");
+                                contraparteDiv.classList.add("form-field", "Contraparte");
+
+                                let contraparteLabel = document.createElement("label");
+                                contraparteLabel.textContent = "Contraparte ";
+                                contraparteLabel.setAttribute("for",`ContrapartesFinalidades-Contraparte_${ContrapartesFinalidades_fieldCount}`);
+
+                                let contraparteSpan = document.createElement("span");
+
+                                let contraparte = document.createElement("input");
+                                contraparte.setAttribute("name",`ContrapartesFinalidades-Contraparte_${ContrapartesFinalidades_fieldCount}`); 
+                                contraparte.setAttribute("id",`ContrapartesFinalidades-Contraparte_${ContrapartesFinalidades_fieldCount}`); 
+                                contraparte.setAttribute("type","text");
+                                contraparte.setAttribute("class","no-margin-right");
+                                contraparte.setAttribute("onblur", `"getPlusValue('Contrapartes e Finalidades', ${ContrapartesFinalidades_fieldCount}, 'ContrapartesFinalidades-Contraparte_${ContrapartesFinalidades_fieldCount}')`);
+                                contraparte.addEventListener('blur', checkEmpty, false);
+
+                                contraparteDiv.appendChild(contraparteLabel);
+                                contraparteDiv.appendChild(contraparte);
+                                contraparteDiv.appendChild(contraparteSpan);
+
+                                // set Objective field
+                                let finalidadeDiv = document.createElement("div");
+                                finalidadeDiv.classList.add("form-field", "Finalidade")
+
+                                let finalidadeLabel = document.createElement("label");
+                                finalidadeLabel.textContent = "Finalidade "
+                                finalidadeLabel.setAttribute("for",`ContrapartesFinalidades-Finalidade_${ContrapartesFinalidades_fieldCount}`)
+
+                                let finalidadeSpan = document.createElement("span");
+
+                                let finalidade = document.createElement("input");
+                                finalidade.setAttribute("name",`ContrapartesFinalidades-Finalidade_${ContrapartesFinalidades_fieldCount}`); 
+                                finalidade.setAttribute("id",`ContrapartesFinalidades-Finalidade_${ContrapartesFinalidades_fieldCount}`); 
+                                finalidade.setAttribute("type","text");
+                                finalidade.setAttribute("class","no-margin-right");
+                                finalidade.setAttribute("onblur", `getPlusValue('Contrapartes e Finalidades', ${ContrapartesFinalidades_fieldCount}, 'ContrapartesFinalidades-Finalidade_${ContrapartesFinalidades_fieldCount}')`);
+                                finalidade.addEventListener('blur', checkEmpty, false);
+
+                                finalidadeDiv.appendChild(finalidadeLabel);
+                                finalidadeDiv.appendChild(finalidade);
+                                finalidadeDiv.appendChild(finalidadeSpan);
+
+                                // set remove button
+                                let removeButtonDiv = document.createElement("div");
+                                removeButtonDiv.textContent = "Remover Contraparte ";
+                                removeButtonDiv.setAttribute("id", `remove-ContrapartesFinalidades-div_${ContrapartesFinalidades_fieldCount}`);
+                                removeButtonDiv.setAttribute("class", "remove-field");
+
+                                let removeButton = document.createElement("button");
+                                removeButton.textContent = " x ";
+                                removeButton.setAttribute("type","button");
+                                removeButton.setAttribute("id", `remove-ContrapartesFinalidades-button_${ContrapartesFinalidades_fieldCount}`);
+                                removeButton.classList.add("remove-button");
+                                removeButton.setAttribute("onClick", `removeContrapartesFinalidades(${ContrapartesFinalidades_fieldCount})`);
+
+                                removeButtonDiv.appendChild(removeButton);
+
+                                // remove old add button
+                                document.getElementById("add-ContrapartesFinalidades-div").remove();
+
+                                // Append pfpjsDiv to the form
+                                newField.appendChild(pfpjDiv);
+
+                                // Append ContraparteDiv to the form
+                                newField.appendChild(contraparteDiv);
+
+                                // Append FinalidadeDiv to the form
+                                newField.appendChild(finalidadeDiv);
+
+                                // Append remove button
+                                newField.appendChild(removeButtonDiv);
+                                
+                                // Append a separator
+                                newField.appendChild(separator);
+
+                                // Append new field
+                                document.getElementsByTagName("fieldset")[2].appendChild(newField);
+                                
+                                // Append add button
+                                document.getElementsByTagName("fieldset")[2].appendChild(newAddDivContrapartesFinalidades);
+                            }
+
+                            function removeContrapartesFinalidades(ContrapartesFinalidades_fieldNumber) {
+                                document.getElementById(`remove-ContrapartesFinalidades-div_${ContrapartesFinalidades_fieldNumber}`).remove();
+                                document.getElementById(`added_ContrapartesFinalidades_Field_${ContrapartesFinalidades_fieldNumber}`).remove();
+                            }
+
+                        </script>
+
+                    </fieldset>
+
+                </div>
+
+                <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+                <!--  CAMPO TARIFAS  -->
+
+                <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+                <div id="div-Tarifas" class="form-segment">
+                    <h4 id="Tarifas-header">Tarifas 
+                        <button type="button" class="hideButton" onclick="hide('fieldset-Tarifas')">
+                            <img src="Images/visible.png" id="fieldset-Tarifas-visibilityIndicator" class="visibilityIndicator" aria-hidden="true">
+                        </button>
+                    </h4>
+
+                    <fieldset id="fieldset-Tarifas" class="fieldset">
+
+                        <div class="tarifaDiv">
+                            <table>
+                                <caption>Serviços Primários</caption>
+                                <tr>
+                                    <th>Manutenção de Conta e Sistemas</th> <td>R$ 150,00</td>
+                                </tr>
+                                <tr>
+                                    <th>Implementação/ Set Up Fee</th> <td>R$ 300,00</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="tarifaDiv no-margin-right">
+                            <table>
+                                <caption>Recebimentos</caption>
+                                <tr>
+                                    <th>Wire Transfer Domestic</th> <td>R$ 16,00</td>
+                                </tr>
+                                <tr>
+                                    <th>Wire Transfer International</th> <td>R$ 24,00</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div class="tarifaDiv">
+                            <table>
+                                <caption>Pagamentos</caption>
+                                <tr>
+                                    <th>Book Transfer</th> <td>R$ 10,00</td>
+                                </tr>
+                                <tr>
+                                    <th>Wire Transfer Domestic</th> <td>R$ 16,00</td>
+                                </tr>
+                                <tr>
+                                    <th>Wire Transfer International</th> <td>R$ 24,00</td>
+                                </tr>     
+                            </table>
+                        </div>
+
+                        <div class="tarifaDiv no-margin-right">
+                            <table>
+                                <caption>Outros Serviços</caption>
+                                <tr>
+                                    <th>Repair</th> <td>R$ 50,00</td>
+                                </tr>
+                                <tr>
+                                    <th>Investigação</th> <td>R$ 50,00</td>
+                                </tr>
+                                <tr>
+                                    <th>MT 940 (End of day reporting)</th> <td>R$ 100,00</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                    </fieldset>
+                </div>
+
+                <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+                <!--  CAMPO REPRESENTANTE LEGAL  -->
+
+                <!-- 0000000000000000000000000000000000000000000000000000000000000000000000000000000 -->
+
+                <div id="div-RepresentanteLegal" class="form-segment">
+                    <h4 id="RepresentanteLegal-header">Representante Legal 
+                        <button type="button" class="hideButton" onclick="hide('fieldset-RepresentanteLegal')">
+                            <img src="Images/visible.png" id="fieldset-RepresentanteLegal-visibilityIndicator" class="visibilityIndicator" aria-hidden="true">
+                        </button>
+                    </h4>
+
+                    <fieldset id="fieldset-RepresentanteLegal" class="fieldset">
+
+                        <div id="RepresentanteLegal-field-Nome" class="form-field field-Nome">
+                            <label id="RepresentanteLegal-label-Nome" for="RepresentanteLegal-Nome_1">Nome</label>
+                            <span></span>
+                            <input name="RepresentanteLegal-Nome_1" id="RepresentanteLegal-Nome_1" class="basicInput" type="text" onblur="getPlusValue('Representante Legal', 1, 'RepresentanteLegal-Nome_1')" required>
+                        </div>
+
+                        <div id="RepresentanteLegal-field-Sobrenome" class="form-field field-Sobrenome">
+                            <label id="RepresentanteLegal-label-Sobrenome" for="RepresentanteLegal-Sobrenome_1">Sobrenome</label>
+                            <span></span>
+                            <input name="RepresentanteLegal-Sobrenome_1" id="RepresentanteLegal-Sobrenome_1" class="basicInput" type="text" onblur="getPlusValue('Representante Legal', 1, 'RepresentanteLegal-Sobrenome_1')" required>
+                        </div>
+
+                        <div id="RepresentanteLegal-field-CPF" class="form-field field-CPF">
+                            <label id="RepresentanteLegal-label-CPF" for="RepresentanteLegal-CPF_1">CPF</label>
+                            <span></span>
+                            <input name="RepresentanteLegal-CPF_1" id="RepresentanteLegal-CPF_1" class="no-margin-right cpfInput" type="text" onblur="getPlusValue('Representante Legal', 1, 'RepresentanteLegal-CPF_1')" required>
+                        </div>
+
+                        <div id="RepresentanteLegal-field-Email" class="form-field field-Email">
+                            <label id="RepresentanteLegal-label-Email" for="RepresentanteLegal-Email_1">E-mail</label>
+                            <span></span> 
+                            <input name="RepresentanteLegal-Email_1" id="RepresentanteLegal-Email_1" data-index="0" class="representanteLegalEmail" type="email" onblur="getPlusValue('Representante Legal', 1, 'RepresentanteLegal-Email_1')" required>
+                        </div>
+
+                        <div id="RepresentanteLegal-field-Cargo" class="form-field field-Cargo">
+                            <label id="RepresentanteLegal-label-Cargo" for="RepresentanteLegal-Cargo_1">Cargo</label>
+                            <span></span> 
+                            <input name="RepresentanteLegal-Cargo_1" id="RepresentanteLegal-Cargo_1" class="no-margin-right basicInput" type="text" onblur="getPlusValue('Representante Legal', 1, 'RepresentanteLegal-Cargo_1')" required>
+                        </div>
+
+                        <div id="RepresentanteLegal-field-DDI" class="form-field field-DDI">
+                            <label id="RepresentanteLegal-label-DDI" for="RepresentanteLegal-DDI_1">DDI</label>
+                            <span></span>
+                            <input name="RepresentanteLegal-DDI_1" id="RepresentanteLegal-DDI_1" class="ddiInput basicInput" type="text" onblur="getPlusValue('Representante Legal', 1, 'RepresentanteLegal-DDI_1')" required>
+                        </div>
+
+                        <div id="RepresentanteLegal-field-Telefone" class="form-field field-Telefone">   
+                            <label id="RepresentanteLegal-label-Telefone" for="RepresentanteLegal-Telefone_1">Telefone</label>
+                            <span></span>
+                            <input name="RepresentanteLegal-Telefone_1" id="RepresentanteLegal-Telefone_1" data-index="0" class="no-margin-right telephoneNumberInput representanteLegalcellphone" type="text" onblur="getPlusValue('Representante Legal', 1, 'RepresentanteLegal-Telefone_1')" required>
+                        </div>
+                        
+                        <div class="separator"></div>
+
+                        <div id="add-RepresentanteLegal-div" class="add-field">
+                            Adicionar representante legal
+                            <button id="add-RepresentanteLegal-button" class="add-button" onClick="addRepresentanteLegal()" type="button"> + </button>
+                        </div>
+                
+                        <script>
+
+                            // set a copy of the button element
+                            let addDivRepresentanteLegal = document.getElementById("add-RepresentanteLegal-div");
+                            let newAddDivRepresentanteLegal = addDivRepresentanteLegal.cloneNode(true);
+
+                            // set counter
+                            let RepresentanteLegal_fieldCount = 1;
+
+                            function addRepresentanteLegal() {
+                                
+                                RepresentanteLegal_fieldCount++;
+
+                                // set new field
+                                let newField = document.createElement("div");
+                                newField.setAttribute("class","addedField");
+                                newField.setAttribute("id",`added_RepresentanteLegal_Field_${RepresentanteLegal_fieldCount}`);
+
+                                // set separator
+                                let separator = document.createElement("div");
+                                separator.setAttribute("class","separator");
+                                separator.style.width = "100%";
+                                separator.style.height = "1px";
+                                separator.style.background = "black";
+                                separator.style.margin = "30px 4% 55px 4%";
+
+                                // set the name field
+                                let nomeDiv = document.createElement("div");
+                                nomeDiv.classList.add("form-field", "field-Nome");
+
+                                let nomeLabel = document.createElement("label");
+                                nomeLabel.textContent = "Nome";
+                                nomeLabel.setAttribute("for","Nome");
+
+                                let nomeSpan = document.createElement("span");
+
+                                let nome = document.createElement("input");
+                                nome.setAttribute("type", "text");
+                                nome.setAttribute("name", `RepresentanteLegal-Nome_${RepresentanteLegal_fieldCount}`);
+                                nome.setAttribute("id", `RepresentanteLegal-Nome_${RepresentanteLegal_fieldCount}`);
+                                nome.setAttribute("onblur", `getPlusValue('Representante Legal', ${RepresentanteLegal_fieldCount}, 'RepresentanteLegal-Nome_${RepresentanteLegal_fieldCount}')`);
+                                nome.addEventListener('blur', checkEmpty, false);
+
+                                nomeDiv.appendChild(nomeLabel);
+                                nomeDiv.appendChild(nome);
+                                nomeDiv.appendChild(nomeSpan);
+                            
+                                // set the last name field
+
+                                let sobrenomeDiv = document.createElement("div");
+                                sobrenomeDiv.classList.add("form-field", "field-Sobrenome");
+
+                                let sobrenomeLabel = document.createElement("label");
+                                sobrenomeLabel.textContent = "Sobrenome";
+                                sobrenomeLabel.setAttribute("for","Nome");
+
+                                let sobrenomeSpan = document.createElement("span");
+
+                                let sobrenome = document.createElement("input");
+                                sobrenome.setAttribute("type", "text");
+                                sobrenome.setAttribute("name", `RepresentanteLegal-Sobrenome_${RepresentanteLegal_fieldCount}`);
+                                sobrenome.setAttribute("id", `RepresentanteLegal-Sobrenome_${RepresentanteLegal_fieldCount}`);
+                                sobrenome.setAttribute("onblur", `getPlusValue('Representante Legal', ${RepresentanteLegal_fieldCount}, 'RepresentanteLegal-Sobrenome_${RepresentanteLegal_fieldCount}')`);
+                                sobrenome.addEventListener('blur', checkEmpty, false);
+
+                                sobrenomeDiv.appendChild(sobrenomeLabel);
+                                sobrenomeDiv.appendChild(sobrenome);
+                                sobrenomeDiv.appendChild(sobrenomeSpan);
+                        
+                                // set the CPF field
+
+                                let cpfDiv = document.createElement("div");
+                                cpfDiv.classList.add("form-field", "field-CPF");
+
+                                let cpfLabel = document.createElement("label");
+                                cpfLabel.textContent = "CPF";
+                                cpfLabel.setAttribute("for","Nome");
+
+                                let cpfSpan = document.createElement("span");
+
+                                let cpf = document.createElement("input");
+                                cpf.setAttribute("type", "text");
+                                cpf.setAttribute("name", `RepresentanteLegal-CPF_${RepresentanteLegal_fieldCount}`);
+                                cpf.classList.add("no-margin-right");
+                                cpf.setAttribute("id", `RepresentanteLegal-CPF_${RepresentanteLegal_fieldCount}`);
+                                cpf.setAttribute("onblur", `getPlusValue('Representante Legal', ${RepresentanteLegal_fieldCount}, 'RepresentanteLegal-CPF_${RepresentanteLegal_fieldCount}')`);
+                                cpf.addEventListener('input', handleCpfInput, false);
+                                cpf.addEventListener('blur', checkCPF, false);
+
+                                cpfDiv.appendChild(cpfLabel);
+                                cpfDiv.appendChild(cpf);
+                                cpfDiv.appendChild(cpfSpan);
+                        
+                                // set the E-mail field
+
+                                let emailDiv = document.createElement("div");
+                                emailDiv.classList.add("form-field", "field-Email");
+
+                                let emailLabel = document.createElement("label");
+                                emailLabel.textContent = "E-mail";
+                                emailLabel.setAttribute("for","Nome");
+
+                                let emailSpan = document.createElement("span");
+
+                                let email = document.createElement("input");
+                                email.setAttribute("type", "text");
+                                email.setAttribute("name", `RepresentanteLegal-Email_${RepresentanteLegal_fieldCount}`);
+                                email.setAttribute("id", `RepresentanteLegal-Email_${RepresentanteLegal_fieldCount}`);
+                                email.setAttribute("data-index", RepresentanteLegal_fieldCount-1);
+                                email.setAttribute("onblur", `getPlusValue('Representante Legal', ${RepresentanteLegal_fieldCount}, 'RepresentanteLegal-Email_${RepresentanteLegal_fieldCount}')`);
+                                email.addEventListener('blur', checkRepresentanteLegalEmailDuplicates, false);
+
+                                emailDiv.appendChild(emailLabel);
+                                emailDiv.appendChild(emailSpan);
+                                emailDiv.appendChild(email);
+                                
+                                // set the Cargo field
+
+                                let cargoDiv = document.createElement("div");
+                                cargoDiv.classList.add("form-field", "field-Cargo");
+
+                                let cargoLabel = document.createElement("label");
+                                cargoLabel.textContent = "Cargo";
+                                cargoLabel.setAttribute("for","Nome");
+
+                                let cargoSpan = document.createElement("span");
+
+                                let cargo = document.createElement("input");
+                                cargo.setAttribute("type", "text");
+                                cargo.setAttribute("name", `RepresentanteLegal-Cargo_${RepresentanteLegal_fieldCount}`);
+                                cargo.classList.add("no-margin-right");
+                                cargo.setAttribute("id", `RepresentanteLegal-Cargo_${RepresentanteLegal_fieldCount}`);
+                                cargo.setAttribute("onblur", `getPlusValue('Representante Legal', ${RepresentanteLegal_fieldCount}, 'RepresentanteLegal-Cargo_${RepresentanteLegal_fieldCount}')`);
+                                cargo.addEventListener('blur', checkEmpty, false);
+
+                                cargoDiv.appendChild(cargoLabel);
+                                cargoDiv.appendChild(cargo);
+                                cargoDiv.appendChild(cargoSpan);
+                        
+                                // set the DDI field
+
+                                let ddiDiv = document.createElement("div");
+                                ddiDiv.classList.add("form-field", "field-DDI");
+
+                                let ddiLabel = document.createElement("label");
+                                ddiLabel.textContent = "DDI";
+                                ddiLabel.setAttribute("for","Nome");
+
+                                let ddiSpan = document.createElement("span");
+
+                                let ddi = document.createElement("input");
+                                ddi.setAttribute("type", "text");
+                                ddi.setAttribute("name", `RepresentanteLegal-DDI_${RepresentanteLegal_fieldCount}`);
+                                ddi.setAttribute("id", `RepresentanteLegal-DDI_${RepresentanteLegal_fieldCount}`);
+                                ddi.classList.add("ddiInput");
+                                ddi.setAttribute("onblur", `getPlusValue('Representante Legal', ${RepresentanteLegal_fieldCount}, 'RepresentanteLegal-DDI_${RepresentanteLegal_fieldCount}')`);
+                                ddi.addEventListener('blur', checkEmpty, false);
+
+                                ddiDiv.appendChild(ddiLabel);
+                                ddiDiv.appendChild(ddi);
+                                ddiDiv.appendChild(ddiSpan);
+                        
+                                // set the Cellphone field
+
+                                let telefoneDiv = document.createElement("div");
+                                telefoneDiv.classList.add("form-field", "field-Telefone");
+
+                                let telefoneLabel = document.createElement("label");
+                                telefoneLabel.textContent = "Telefone";
+                                telefoneLabel.setAttribute("for","Nome");
+
+                                let telefoneSpan = document.createElement("span")
+
+                                let telefone = document.createElement("input");
+                                telefone.setAttribute("type", "text");
+                                telefone.setAttribute("name", `RepresentanteLegal-Telefone_${RepresentanteLegal_fieldCount}`);
+                                telefone.classList.add("no-margin-right", "telephoneNumberInput");
+                                telefone.setAttribute("id", `RepresentanteLegal-Telefone_${RepresentanteLegal_fieldCount}`);
+                                telefone.setAttribute("data-index", RepresentanteLegal_fieldCount-1);
+                                telefone.setAttribute("onblur", `getPlusValue('Representante Legal', ${RepresentanteLegal_fieldCount}, 'RepresentanteLegal-Telefone_${RepresentanteLegal_fieldCount}')`);
+                                telefone.addEventListener('input', handleCellphoneInput, false);
+                                telefone.addEventListener('blur', checkRepresentanteLegalCellphoneDuplicates, false);
+
+                                telefoneDiv.appendChild(telefoneLabel);
+                                telefoneDiv.appendChild(telefoneSpan);
+                                telefoneDiv.appendChild(telefone);
+
+                                // set remove button
+                                let removeButtonDiv = document.createElement("div");
+                                removeButtonDiv.textContent = "Remover representante legal "
+                                removeButtonDiv.setAttribute("id", `remove-RepresentanteLegal-div_${RepresentanteLegal_fieldCount}`) ;
+                                removeButtonDiv.setAttribute("class", "remove-field");
+
+                                let removeButton = document.createElement("button");
+                                removeButton.textContent = " x ";
+                                removeButton.setAttribute("type","button");
+                                removeButton.setAttribute("id", `remove-RepresentanteLegal-button_${RepresentanteLegal_fieldCount}`) ;
+                                removeButton.setAttribute("class", "remove-button" );
+                                removeButton.setAttribute("onClick", `removeRepresentanteLegal(${RepresentanteLegal_fieldCount})` );
+
+                                removeButtonDiv.appendChild(removeButton);
+
+                                //remove old add button
+                                document.getElementById("add-RepresentanteLegal-div").remove()
+
+                                // Append NomeDiv to the form
+                                newField.appendChild(nomeDiv);
+                
+                                // Append SobrenomeDiv to the form
+                                newField.appendChild(sobrenomeDiv);
+
+                                // Append CPFDiv to the form
+                                newField.appendChild(cpfDiv);
+
+                                // Append EmailDiv to the form
+                                newField.appendChild(emailDiv);
+
+                                // Append CargoDiv to the form
+                                newField.appendChild(cargoDiv);
+
+                                // Append ddiDiv to the form
+                                newField.appendChild(ddiDiv);
+
+                                // Append TelefoneDiv to the form
+                                newField.appendChild(telefoneDiv);
+
+                                // Append remove button
+                                newField.appendChild(removeButtonDiv);
+                                
+                                // Append a separator
+                                newField.appendChild(separator);
+
+                                // Append new field
+                                document.getElementsByTagName("fieldset")[4].appendChild(newField);
+                                
+                                // Append add button
+                                document.getElementsByTagName("fieldset")[4].appendChild(newAddDivRepresentanteLegal);
+
+                            }
+
+                            function removeRepresentanteLegal(RepresentanteLegal_fieldNumber) {
+                                document.getElementById(`remove-RepresentanteLegal-div_${RepresentanteLegal_fieldNumber}`).remove();
+                                document.getElementById(`added_RepresentanteLegal_Field_${RepresentanteLegal_fieldNumber}`).remove();
+                            }
+                        </script>
+
+                    </fieldset>
+                </div>
+
+                <div id="buttonSendDiv">
+                    
+                    <button type="submit" id="buttonSend"> Enviar Formulário </button>
+
+                    <script>
+
+                        let form = document.querySelector("form");
+                        
+                        form.addEventListener("submit",submitEvent, false);
+                        
+                        function submitEvent() {
+                            event.preventDefault();
+                            alert("Fomulário Enviado!");    
+                            console.log(dadosCliente);
+                        }
+
+                    </script>
+
+                </div>  
+                
+                <script>
+
+                    // defines function to unfocus select elements upon selecting an option and applies it to all select elements in the page
+                    function unfocus(focusedElement) {
+                        focusedElement.target.blur()
+                    }
+                    
+                    let selects = document.querySelectorAll("select")
+                    for (let select of selects) {
+                        select.addEventListener("change", unfocus, false)
+                    }
+
+                    // defines function to make Lo inputs unavainable unless a Mes option has been selected
+                    
+                    function preventFocus(event) {
+                        event.preventDefault();
+
+                        if (event.relatedTarget) {
+                            // Revert focus back to previous blurring element
+                            event.relatedTarget.focus();
+                        } else {
+                            // No previous focus target, blur instead
+                            event.currentTarget.blur();
+                        }
+                    }
+
+                    function setValorFieldFocusAvailability(mesFieldId, valorFieldId) {
+                        let mesField = document.getElementById(mesFieldId);
+                        let valorField = document.getElementById(valorFieldId);
+
+                        if (mesField.value != "") {
+                            valorField.setAttribute('tabindex', '0');
+                            valorField.removeEventListener('focus', preventFocus, false);
+                            valorField.parentElement.classList.remove("unfocusable");
+                            valorField.classList.remove("unfocusable");
+                        } else {
+                            valorField.setAttribute('tabindex', '-1');
+                            valorField.addEventListener('focus', preventFocus, false);
+                            valorField.classList.add("unfocusable");
+                            valorField.parentElement.classList.add("unfocusable");
+                        }
+                    }
+
+                    let valorField1 = document.getElementById("LimiteOperacional-Valor_1");
+                    valorField1.setAttribute('tabindex', '-1');
+                    valorField1.addEventListener('focus', preventFocus, false);
+                    valorField1.parentElement.classList.add("unfocusable");
+                    valorField1.classList.add("unfocusable");
+                    
+                    // defines function to mask number inputs and applies it to all number input elements in the page
+                    function handleNumberInput (input) {
+                        input.target.value = numberMask(input.target.value);
+                        }
+
+                    function numberMask(number) {
+                        return number.replace(/\D/g, '')
+                                     .replace(/(\d{6})\d+?$/, '$1');
+                    }
+                    
+                    const numberInputs = document.querySelectorAll('input.numberInput')
+                    for (let numberMask of numberInputs) {
+                        numberMask.addEventListener('input', handleNumberInput, false);
+                    }
+
+                    // defines function to mask CNPJ inputs and applies it to all CNPJ elements in the page
+                    function handleCnpjInput(input) {
+                        input.target.value = cnpjMask(input.target.value);
+                        }
+
+                    function cnpjMask(cnpj) {
+                        return cnpj.replace(/\D/g, '')
+                                   .replace(/^(\d{2})(\d{1,3})/, '$1.$2')
+                                   .replace(/^(\d{2}).(\d{3})(\d{1,3})/, '$1.$2.$3')
+                                   .replace(/^(\d{2}).(\d{3}).(\d{3})(\d{1,4})/, '$1.$2.$3/$4')
+                                   .replace(/^(\d{2}).(\d{3}).(\d{3})\/(\d{4})(\d{1,2})/, '$1.$2.$3/$4-$5')
+                                   .replace(/(\d{2}.\d{3}.\d{3}\/\d{4}-\d{2})\d+?$/, '$1');
+                    }
+                    
+                    const cnpjInputs = document.querySelectorAll('input.cnpjInput')
+                    for (let cnpjMask of cnpjInputs) {
+                        cnpjMask.addEventListener('input', handleCnpjInput, false);
+                    }
+
+                    // defines function to mask CEP inputs and applies it to all CEP input elements in the page
+                    function handleCepInput (input) {
+                        input.target.value = cepMask(input.target.value);
+                        }
+
+                    function cepMask(cep) {
+                        return cep.replace(/\D/g, '')
+                                    .replace(/^(\d{5})(\d{1,3})/, '$1-$2')
+                                    .replace(/(\d{5}-\d{3})\d+?$/, '$1');
+                    }
+                    
+                    const cepInputs = document.querySelectorAll('input.cepInput')
+                    for (let cepMask of cepInputs) {
+                        cepMask.addEventListener('input', handleCepInput, false);
+                    }
+
+                    // defines function to mask DDI inputs and applies it to all DDI input elements in the page
+                    function handleDDIInput (input) {
+                        input.target.value = ddiMask(input.target.value);
+                        }
+
+                    function ddiMask(ddi) {
+                        return ddi.replace(/\D/g, '')
+                                    .replace(/^(\d{1,4})/, '+$1')
+                                    .replace(/(\+\d{4})\d+?$/, '$1');
+                    }
+                    
+                    const ddiInputs = document.querySelectorAll('input.ddiInput')
+                    for (let ddiMask of ddiInputs) {
+                        ddiMask.addEventListener('input', handleDDIInput, false);
+                    }
+
+                    // defines function to mask cellphone inputs and applies it to all cellphone input elements in the page
+                    function handleCellphoneInput (input) {
+                        input.target.value = phoneMask(input.target.value);
+                        }
+
+                    function phoneMask(phone) {
+                        return phone.replace(/\D/g, '')
+                                    .replace(/^(\d)/, '($1')
+                                    .replace(/^(\(\d{2})(\d)/, '$1) $2')
+                                    .replace(/(\d{4})(\d{1,4})/, '$1-$2')
+                                    .replace(/(\d{4})(-)(\d{1})(\d{4})/, '$1$3$2$4')
+                                    .replace(/(\d{5}-\d{4})\d+?$/, '$1');
+                    }
+                    
+                    const phoneInputs = document.querySelectorAll('input.telephoneNumberInput');
+                    for (let phoneMask of phoneInputs) {
+                        phoneMask.addEventListener('input', handleCellphoneInput, false);
+                    }
+                    
+                    // defines function to mask LO value inputs and applies it to all LO value elements in the page
+                    function handleNumericInput (input) {
+                        input.target.value = numericValueMask(input.target.value);
+                        }
+
+                    function numericValueMask(numericValue) {
+                        return numericValue.replace(/\D/g, '')
+                                           .replace(/(\d{1,3})(\d{2})$/, '$1,$2')
+                                           .replace(/(\d{1,3})(\d{3}),(\d{2})$/, '$1.$2,$3')
+                                           .replace(/(\d{1,3})(\d{3}).(\d{3}),(\d{2})$/, '$1.$2.$3,$4')
+                                           .replace(/(\d{1,3})(\d{3}).(\d{3}).(\d{3}),(\d{2})$/, '$1.$2.$3.$4,$5')
+                                           .replace(/(\d{3,12})(\d{1}).(\d{2})(\d{1}).(\d{2})(\d{1}).(\d{2})(\d{1}),(\d{1})(\d{1})/, '$1.$2$3.$4$5.$6$7,$8$9');
+                    }
+                    
+                    const loInputs = document.querySelectorAll('input.numericValueInput')
+                    for (let numericValueMask of loInputs) {
+                        numericValueMask.addEventListener('input', handleNumericInput, false);
+                    }
+
+                    // defines function to mask CPF inputs and applies it to all CPF elements in the page
+                    function handleCpfInput(input) {
+                        input.target.value = cpfMask(input.target.value);
+                        }
+
+                    function cpfMask(cpf) {
+                        return cpf.replace(/\D/g, '')
+                                  .replace(/^(\d{3})(\d{1,3})/, '$1.$2')
+                                  .replace(/^(\d{3}).(\d{3})(\d{1,3})/, '$1.$2.$3')
+                                  .replace(/^(\d{3}).(\d{3}).(\d{3})(\d{1,2})/, '$1.$2.$3-$4')
+                                  .replace(/(\d{3}.\d{3}.\d{3}-\d{2})\d+?$/, '$1');
+                    }
+                    
+                    const cpfInputs = document.querySelectorAll('input.cpfInput')
+                    for (let cpfMask of cpfInputs) {
+                        cpfMask.addEventListener('input', handleCpfInput, false);
+                    }
+
+                </script>
+
+
+                <script>
+                                        
+                    function checkEmpty(input) {
+                        let span = input.target.parentElement.querySelector('span');
+                        let label = input.target.parentElement.querySelector('label');
+
+                        if (input.target.value.trim() == "") {
+                            span.textContent = "Por favor insira um valor";
+                            input.target.style.border = "1px solid #910a0a";
+                            label.style.color = "#910a0a"
+                            return false
+                        }
+                        else {
+                            span.textContent = "";
+                            input.target.style.border = "0px none #000000";
+                            label.style.color = "#000000";
+                            return true
+                        }
+                    }
+                    
+                    let basicInputs = document.querySelectorAll('.basicInput')
+                    for (let basicInput of basicInputs) {
+                        basicInput.addEventListener('blur', checkEmpty, false);
+                    }
+
+                    function checkCNPJ (input) {
+                        let regex = /\d{2}.\d{3}.\d{3}\/\d{4}\-\d{2}/;
+                        let span = input.target.parentElement.querySelector('span');
+                        let label = input.target.parentElement.querySelector('label');
+
+                        if (!checkEmpty(input)) {
+                            
+                            return
+                        }
+
+                        else if (!regex.test(input.target.value)) {
+                            
+                            span.textContent = "Por favor insira um CNPJ valido";
+                            input.target.style.border = "1px solid #910a0a";
+                            label.style.color = "#910a0a"
+                            return false
+                        }
+                            
+                        else {
+
+                            span.textContent = "";
+                            input.target.style.border = "0px none #000000";
+                            label.style.color = "#000000";
+                            return true
+                        }
+                    }
+                    
+                    let CNPJInputs = document.querySelectorAll('.cnpjInput')
+                    for (let CNPJInput of CNPJInputs) {
+                        CNPJInput.addEventListener('blur', checkCNPJ, false);
+                    }
+
+                    function checkCEP(input) {
+                        let regex = /\d{5}\-\d{3}/;
+                        let span = input.target.parentElement.querySelector('span');
+                        let label = input.target.parentElement.querySelector('label');
+
+                        if (!checkEmpty(input)) {
+                            
+                            return
+                        }
+
+                        else if (!regex.test(input.target.value)) {
+                            
+                            span.textContent = "Por favor insira um CEP / P.O. BOX valido";
+                            input.target.style.border = "1px solid #910a0a";
+                            label.style.color = "#910a0a"
+                            return false
+                        }
+                            
+                        else {
+
+                            span.textContent = "";
+                            input.target.style.border = "0px none #000000";
+                            label.style.color = "#000000";
+                            return true
+                        }
+                    }
+                    
+                    let CEPInputs = document.querySelectorAll('.cepInput')
+                    for (let CEPInput of CEPInputs) {
+                        CEPInput.addEventListener('blur', checkCEP, false);
+                    }
+
+                    function checkEmail(input) {
+                        let regex =	/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                        let span = input.target.parentElement.querySelector('span');
+                        let label = input.target.parentElement.querySelector('label');
+                        let email = input.target.value.trim();
+
+                        if (!checkEmpty(input)) {
+                            
+                            return
+                        }
+
+                        else if (!regex.test(email)) {
+                            
+                            span.textContent = "Por favor insira um E-mail   valido";
+                            input.target.style.border = "1px solid #910a0a";
+                            label.style.color = "#910a0a"
+                            return false
+                        }
+                            
+                        else {
+
+                            span.textContent = "";
+                            input.target.style.border = "0px none #000000";
+                            label.style.color = "#000000";
+                            return true
+                        }
+                    }
+                    
+                    let emailStaticInputs = document.querySelectorAll('.emailStaticInput')
+                    for (let emailStaticInput of emailStaticInputs) {
+                        emailStaticInput.addEventListener('blur', checkEmail, false);
+                    }
+
+                    function checkCellphone(input) {
+                        let regex = /\d{5}\-\d{4}|\d{4}\-\d{4}/;
+                        let span = input.target.parentElement.querySelector('span');
+                        let label = input.target.parentElement.querySelector('label');
+
+                        if (!checkEmpty(input)) {
+                            
+                            return
+                        }
+
+                        else if (!regex.test(input.target.value)) {
+                            
+                            span.textContent = "Por favor insira um telefone valido";
+                            input.target.style.border = "1px solid #910a0a";
+                            label.style.color = "#910a0a"
+                            return false
+                        }
+                            
+                        else {
+
+                            span.textContent = "";
+                            input.target.style.border = "0px none #000000";
+                            label.style.color = "#000000";
+                            return true
+                        }
+                    }
+                    
+                    let cellphoneStaticInputs = document.querySelectorAll('.cellphoneStaticInput')
+                    for (let cellphoneStaticInput of cellphoneStaticInputs) {
+                        cellphoneStaticInput.addEventListener('blur', checkCellphone, false);
+                    }
+
+                    function checkCPF(input) {
+                        let regex = /\d{3}.\d{3}.\d{3}\-\d{2}/;
+                        let span = input.target.parentElement.querySelector('span');
+                        let label = input.target.parentElement.querySelector('label');
+
+                        if (!checkEmpty(input)) {
+                            
+                            return
+                        }
+
+                        else if (!regex.test(input.target.value)) {
+                            
+                            span.textContent = "Por favor insira um CPF valido";
+                            input.target.style.border = "1px solid #910a0a";
+                            label.style.color = "#910a0a"
+                            return false
+                        }
+                            
+                        else {
+
+                            span.textContent = "";
+                            input.target.style.border = "0px none #000000";
+                            label.style.color = "#000000";
+                            return true
+                        }
+                    }
+
+                    let CPFInputs = document.querySelectorAll('.cpfInput')
+                    for (let CPFInput of CPFInputs) {
+                        CPFInput.addEventListener('blur', checkCPF, false);
+                    }
+
+                    const representanteLegalEmails = [];
+
+                    function checkRepresentanteLegalEmailDuplicates(input) {
+                        let span = input.target.parentElement.querySelector('span')
+                        let label = input.target.parentElement.querySelector('label');
+                        let inputIndex = parseInt(input.target.dataset.index);
+                        let email = input.target.value.trim();
+                        let list;
+
+                        if(representanteLegalEmails.length < 1) {
+                            list = representanteLegalEmails;
+                        }
+
+                        else {
+                            list = representanteLegalEmails.slice(0, inputIndex).concat(representanteLegalEmails.slice(inputIndex + 1, representanteLegalEmails.length));
+                        }
+
+                        if (!checkEmpty(input)) {
+                            
+                            return
+                        }
+
+                        else if (!checkEmail(input)) {
+                            
+                            return
+                        }
+
+                        else if (list.indexOf(email) == -1) {
+                            representanteLegalEmails[inputIndex] = input.target.value;                        
+                            span.textContent = "";
+                            input.target.style.border = "0px none #000000";
+                            label.style.color = "#000000";
+                        }
+
+                        else {
+                            span.textContent = "Email já utilizado";
+                            input.target.style.border = "1px solid #910a0a";
+                            label.style.color = "#910a0a"
+                        }
+                    }
+                    
+                    let representanteLegalEmailInputs = document.querySelectorAll('.representanteLegalEmail')
+                    for (let representanteLegalEmailInput of representanteLegalEmailInputs) {
+                        representanteLegalEmailInput.addEventListener('blur', checkRepresentanteLegalEmailDuplicates, false);
+                    }
+
+                    const masterCanalEmails = [];
+
+                    function checkMasterCanalEmailDuplicates(input) {
+                        let span = input.target.parentElement.querySelector('span')
+                        let label = input.target.parentElement.querySelector('label');
+                        let inputIndex = parseInt(input.target.dataset.index);
+                        let email = input.target.value.trim();
+                        let list;
+
+                        if(masterCanalEmails.length < 1) {
+                            list = masterCanalEmails;
+                        }
+
+                        else {
+                            list = masterCanalEmails.slice(0, inputIndex).concat(masterCanalEmails.slice(inputIndex + 1, masterCanalEmails.length));
+                        }
+
+                        if (!checkEmpty(input)) {
+                            
+                            return
+                        }
+
+                        else if (!checkEmail(input)) {
+                            
+                            return
+                        }
+
+                        else if (list.indexOf(email) == -1) {
+                            masterCanalEmails[inputIndex] = input.target.value;                        
+                            span.textContent = "";
+                            input.target.style.border = "0px none #000000";
+                            label.style.color = "#000000";
+                        }
+
+                        else {
+                            span.textContent = "Email já utilizado";
+                            input.target.style.border = "1px solid #910a0a";
+                            label.style.color = "#910a0a";
+                        }
+                    }
+                    
+                    let masterCanalEmailInputs = document.querySelectorAll('.masterCanalEmail');
+                    for (let masterCanalEmailInput of masterCanalEmailInputs) {
+                        masterCanalEmailInput.addEventListener('blur', checkMasterCanalEmailDuplicates, false);
+                    }
+
+                    const representanteLegalcellphones = [];
+
+                    function checkRepresentanteLegalCellphoneDuplicates(input) {
+                        let span = input.target.parentElement.querySelector('span');
+                        let label = input.target.parentElement.querySelector('label');
+                        let inputIndex = parseInt(input.target.dataset.index);
+                        let list;
+
+                        if(representanteLegalcellphones.length < 1) {
+                            list = representanteLegalcellphones;
+                        }
+
+                        else {
+                            list = representanteLegalcellphones.slice(0, inputIndex).concat(representanteLegalcellphones.slice(inputIndex + 1, representanteLegalcellphones.length));
+                        }
+
+                        if (!checkEmpty(input)) {
+                            
+                            return
+                        }
+
+                        else if (!checkCellphone(input)) {
+                            
+                            return
+                        }
+
+                        else if (list.indexOf(input.target.value) == -1) {
+                            representanteLegalcellphones[inputIndex] = input.target.value;
+                            span.textContent = "";
+                            input.target.style.border = "0px none #000000";
+                            label.style.color = "#000000"
+                        }
+                        else {
+                            span.textContent = "Telefone já utilizado";
+                            input.target.style.border = "1px solid #910a0a";
+                            label.style.color = "#910a0a"
+                        }
+                    }
+
+                    let representanteLegalcellphoneInputs = document.querySelectorAll('.representanteLegalcellphone')
+                    for (let representanteLegalcellphoneInput of representanteLegalcellphoneInputs) {
+                        representanteLegalcellphoneInput.addEventListener('blur', checkRepresentanteLegalCellphoneDuplicates, false);
+                    }
+
+                    const masterCanalcellphones = [];
+
+                    function checkMasterCanalCellphoneDuplicates(input) {
+                        let span = input.target.parentElement.querySelector('span');
+                        let label = input.target.parentElement.querySelector('label');
+                        let inputIndex = parseInt(input.target.dataset.index);
+                        let list;
+
+                        if(masterCanalcellphones.length < 1) {
+                            list = masterCanalcellphones;
+                        }
+
+                        else {
+                            list = masterCanalcellphones.slice(0, inputIndex).concat(masterCanalcellphones.slice(inputIndex + 1, masterCanalcellphones.length));
+                        }
+
+                        if (!checkEmpty(input)) {
+                            
+                            return
+                        }
+
+                        if (!checkEmpty(input)) {
+                            
+                            return
+                        }
+
+                        else if (!checkCellphone(input)) {
+                            
+                            return
+                        }
+
+                        else if (list.indexOf(input.target.value) == -1) {
+                            masterCanalcellphones.push(input.target.value)
+                            span.textContent = "";
+                            input.target.style.border = "0px none #000000";
+                            label.style.color = "#000000"
+                        }
+                        else {
+                            span.textContent = "Telefone já utilizado";
+                            input.target.style.border = "1px solid #910a0a";
+                            label.style.color = "#910a0a"
+                        }
+                    }
+
+                    let masterCanalcellphoneInputs = document.querySelectorAll('.masterCanalcellphone')
+                    for (let masterCanalcellphoneInput of masterCanalcellphoneInputs) {
+                        masterCanalcellphoneInput.addEventListener('blur', checkMasterCanalCellphoneDuplicates, false);
+                    }
+
+                </script>
+
+            </form>     
+        </main>
+
+        <footer>
+            <div id="footerBackground">
+                <p id="footerText"> Em caso de dúvidas entrar em contato com email@email.com </p> 
+            </div>
+            
+        </footer> 
+
+    </body>
+
+</html>
