@@ -29,7 +29,7 @@ class Excel_to_CSV:
 
                 # procedes to make a csv copy of the current file
                 df = pd.read_excel(f"{path}\{i}")
-                df.to_csv(f"{path}\{i[:-5]}.csv", index=False, header=True, sep=";")
+                df.to_csv(f"{target_path}\{i[:-5]}.csv", index=False, header=True, sep=";")
                 print(f"{i} copied to csv")
         print("Directory fully copied to CSV\n")
         return
