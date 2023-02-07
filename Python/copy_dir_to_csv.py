@@ -5,19 +5,27 @@ class Excel_to_CSV:
 
     def __init__(self, path = None, target_path =  None):
         
+        if not (os.path.isdir(path)):
+            raise FileNotFoundError("path argument is not a directory")
         self.path = path
 
         if target_path == None:
             self.target_path = path
+        elif not (os.path.isdir(target_path)):
+            raise FileNotFoundError("target_path argument is not a directory")
         else:
             self.target_path = target_path
 
     def copie(self, path = None, target_path =  None):
         if path == None:
             raise FileNotFoundError("Missing path argument")
-
+        elif not (os.path.isdir(path)):
+            raise FileNotFoundError("path argument is not a directory")
+        
         if target_path == None:
             target_path = path
+        elif not (os.path.isdir(target_path)):
+            raise FileNotFoundError("target_path argument is not a directory")
 
         dir_list = os.listdir(path) # makes a list out of every file in the directory
 
@@ -37,6 +45,8 @@ class Excel_to_CSV:
     def check_dir(self, path = None):
         if path == None:
             raise FileNotFoundError("Missing path argument")
+        elif not (os.path.isdir(path)):
+            raise FileNotFoundError("path argument is not a directory")
 
         xlsx = 0 # excel file counter
         csv = 0  # csv file counter
