@@ -28,11 +28,12 @@ class Excel_to_CSV:
             raise FileNotFoundError("target_path argument is not a directory")
 
         dir_list = os.listdir(path) # makes a list out of every file in the directory
+        target_dir_list = os.listdir(target_path) # makes a list out of every file in the target directory
 
         # iterares through every file in the directory to see if it needs to receive a copy in csv
         for i in dir_list:
             if i[-5:] == ".xlsx": # checks if the current file is an excel file
-                if f"{i[:-5]}.csv" in dir_list: # checks if the current file already has its csv counterpart, skips to the next loop if it does
+                if f"{i[:-5]}.csv" in target_dir_list: # checks if the current file already has its csv counterpart, skips to the next loop if it does
                     continue
 
                 # procedes to make a csv copy of the current file
