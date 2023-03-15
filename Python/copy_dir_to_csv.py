@@ -5,7 +5,9 @@ class Excel_to_CSV:
 
     def __init__(self, path = None, target_path =  None):
         
-        if not (os.path.isdir(path)):
+        if path == None:
+            raise FileNotFoundError("Missing path argument")         
+        elif not (os.path.isdir(path)):
             raise FileNotFoundError("path argument is not a directory")
         self.path = path
 
