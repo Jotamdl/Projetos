@@ -1,0 +1,424 @@
+Invalid port. Exiting...
+Invalid port. Exiting...
+1695585956672	geckodriver	INFO	Listening on 127.0.0.1:55524
+1695585959714	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "--user-agent ... 5" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileENomG8"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695585960054	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1695585960169	Marionette	INFO	Listening on port 55536
+WebDriver BiDi listening on ws://127.0.0.1:55525
+Read port: 55536
+1695585960563	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55525/devtools/browser/9077263b-f0c5-45e9-934e-aa368cad9a72
+1695586240276	geckodriver	INFO	Listening on 127.0.0.1:55617
+1695586243298	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "--user-agent ... 8" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofilenncrjr"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695586243529	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1695586243619	Marionette	INFO	Listening on port 55626
+WebDriver BiDi listening on ws://127.0.0.1:55618
+Read port: 55626
+1695586243722	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55618/devtools/browser/a2ab74e2-c100-4f9a-aeff-f9edbda15c0b
+1695586551750	geckodriver	INFO	Listening on 127.0.0.1:50845
+1695586554624	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "--user-agent ... 6" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileAfkzV6"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695586556227	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1695586556384	Marionette	INFO	Listening on port 50867
+WebDriver BiDi listening on ws://127.0.0.1:50846
+Read port: 50867
+1695586557086	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50846/devtools/browser/efaf4c75-d6c7-450a-8931-c0936fd70a00
+1695586605480	geckodriver	INFO	Listening on 127.0.0.1:51154
+1695586608529	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "--user-agent ... 5" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileRC3d6N"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695586608731	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1695586608812	Marionette	INFO	Listening on port 51165
+WebDriver BiDi listening on ws://127.0.0.1:51155
+Read port: 51165
+1695586609100	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51155/devtools/browser/9a29189e-f0a0-47d0-b19a-a898b401b410
+1695586642313	geckodriver	INFO	Listening on 127.0.0.1:51208
+1695586645361	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51209" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileNPiBLR"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695586645554	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695586645634	Marionette	INFO	Listening on port 51218
+WebDriver BiDi listening on ws://127.0.0.1:51209
+Read port: 51218
+1695586645833	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51209/devtools/browser/cc7734e4-b7fd-4a38-8969-01e2be12f7f1
+1695586671923	Marionette	INFO	Stopped listening on port 51218
+Dynamically enable window occlusion 1
+1695586705282	geckodriver	INFO	Listening on 127.0.0.1:51285
+1695586708309	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51286" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofile7JoEXW"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695586708509	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695586708588	Marionette	INFO	Listening on port 51297
+WebDriver BiDi listening on ws://127.0.0.1:51286
+Read port: 51297
+1695586708978	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51286/devtools/browser/f1fb89c9-ad0f-46bc-844e-cd150193961c
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+1695586734717	Marionette	INFO	Stopped listening on port 51297
+Dynamically enable window occlusion 1
+1695586736872	geckodriver	INFO	Listening on 127.0.0.1:51344
+1695586739921	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51345" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileY8lnfo"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695586740103	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1695586740182	Marionette	INFO	Listening on port 51353
+WebDriver BiDi listening on ws://127.0.0.1:51345
+Read port: 51353
+1695586740386	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51345/devtools/browser/b68d3d0c-9d0f-4102-ab76-5dd26bd251fe
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+1695586754972	Marionette	INFO	Stopped listening on port 51353
+Dynamically enable window occlusion 1
+1695586788535	geckodriver	INFO	Listening on 127.0.0.1:51417
+1695586791595	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--ignore-certificate-errors" "--user-agent ... 8" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileGsz6Fc"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695586791784	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-ignore-certificate-errors"
+1695586791867	Marionette	INFO	Listening on port 51426
+WebDriver BiDi listening on ws://127.0.0.1:51418
+Read port: 51426
+1695586792234	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51418/devtools/browser/1fdc13e2-af50-44cb-8f0b-0128925a2e05
+1695586809163	geckodriver	INFO	Listening on 127.0.0.1:51459
+1695586812219	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (X11; Linux x86_6 ... 0" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofile4gQzDJ"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695586812412	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695586812490	Marionette	INFO	Listening on port 51469
+WebDriver BiDi listening on ws://127.0.0.1:51460
+Read port: 51469
+1695586812762	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51460/devtools/browser/85b71fa0-f783-4930-967b-2f84017a4361
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+1695586820885	Marionette	INFO	Stopped listening on port 51469
+Dynamically enable window occlusion 1
+1695586877900	geckodriver	INFO	Listening on 127.0.0.1:51676
+1695586880937	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (Windows NT 10.0; ... 7" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofilecSM6Ak"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695586881139	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695586881231	Marionette	INFO	Listening on port 51685
+WebDriver BiDi listening on ws://127.0.0.1:51677
+Read port: 51685
+1695586881589	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51677/devtools/browser/893bc901-2dba-4a12-a0bc-5fc08332f78e
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+JavaScript error: resource://devtools/client/jsonview/Sniffer.sys.mjs, line 53: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsIChannel.contentType]
+1695586884257	Marionette	INFO	Stopped listening on port 51685
+Dynamically enable window occlusion 1
+1695586996082	geckodriver	INFO	Listening on 127.0.0.1:51755
+1695586999139	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (Windows NT 10.0; ... 6" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofile8iMcAy"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695586999324	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695586999405	Marionette	INFO	Listening on port 51765
+WebDriver BiDi listening on ws://127.0.0.1:51756
+Read port: 51765
+1695586999608	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51756/devtools/browser/e64f8311-6e6d-41d1-8a03-1f49181e8433
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+1695587011393	Marionette	INFO	Stopped listening on port 51765
+Dynamically enable window occlusion 1
+1695587046915	geckodriver	INFO	Listening on 127.0.0.1:51824
+1695587049958	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (Windows NT 10.0; ... 5" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofiledNn63A"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695587050139	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695587050220	Marionette	INFO	Listening on port 51833
+WebDriver BiDi listening on ws://127.0.0.1:51825
+Read port: 51833
+1695587050564	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51825/devtools/browser/0981e8c7-bacf-4863-a756-5a5d5e626e6e
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+1695587062646	Marionette	INFO	Stopped listening on port 51833
+Dynamically enable window occlusion 1
+1695587071467	geckodriver	INFO	Listening on 127.0.0.1:51899
+1695587074500	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (X11; Linux x86_6 ... 0" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileuGjyIL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695587074699	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695587074785	Marionette	INFO	Listening on port 51909
+WebDriver BiDi listening on ws://127.0.0.1:51900
+Read port: 51909
+1695587075096	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51900/devtools/browser/3ab7e13b-6aaf-42cb-b19c-1eeda9955e90
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+1695587099847	Marionette	INFO	Stopped listening on port 51909
+Dynamically enable window occlusion 1
+1695587119049	geckodriver	INFO	Listening on 127.0.0.1:51958
+1695587122101	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (Windows NT 10.0; ... 9" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofile8x89vG"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695587122296	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695587122375	Marionette	INFO	Listening on port 51967
+WebDriver BiDi listening on ws://127.0.0.1:51959
+Read port: 51967
+1695587122578	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51959/devtools/browser/31fcdbc7-0034-40f0-94ce-9b36abfc634a
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.error: ({})
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 573: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 573: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 573: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 573: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+JavaScript error: resource://gre/modules/AsyncShutdown.sys.mjs, line 573: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1695587319248	Marionette	INFO	Stopped listening on port 51967
+Dynamically enable window occlusion 1
+1695587321739	geckodriver	INFO	Listening on 127.0.0.1:52050
+1695587324796	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (Windows NT 10.0; ... 1" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileNUqtT2"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695587325117	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695587325196	Marionette	INFO	Listening on port 52059
+WebDriver BiDi listening on ws://127.0.0.1:52051
+Read port: 52059
+1695587326353	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52051/devtools/browser/0f31bce6-ea5c-4efc-8df9-8d16b91a1c60
+console.error: (new TypeError("this._searchProviderInfo is null", "resource:///modules/SearchSERPTelemetry.sys.mjs", 638))
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+1695587352422	Marionette	INFO	Stopped listening on port 52059
+Dynamically enable window occlusion 1
+1695587453118	geckodriver	INFO	Listening on 127.0.0.1:52146
+1695587456170	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (Windows NT 10.0; ... 7" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofilehNZVJt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695587456362	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+console.error: "Warning: unrecognized command line flag" "-disable-blink-features"
+console.error: "Warning: unrecognized command line flag" "-disable-dev-shm-usage"
+console.error: "Warning: unrecognized command line flag" "-no-sandbox"
+console.error: "Warning: unrecognized command line flag" "-disable-infobars"
+1695587456442	Marionette	INFO	Listening on port 52155
+WebDriver BiDi listening on ws://127.0.0.1:52147
+Read port: 52155
+1695587456842	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52147/devtools/browser/6c8b23ce-9ad6-4c15-98d4-d2b57ea0e753
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+1695587471539	Marionette	INFO	Stopped listening on port 52155
+Dynamically enable window occlusion 1
+1695587676920	geckodriver	INFO	Listening on 127.0.0.1:52231
+1695587679988	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (X11; Linux x86_6 ... 2" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileNB2km2"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695587680173	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695587680253	Marionette	INFO	Listening on port 52241
+WebDriver BiDi listening on ws://127.0.0.1:52232
+Read port: 52241
+1695587680467	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52232/devtools/browser/a58cab9f-7828-47c0-8627-2f3467036caa
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+1695587687513	Marionette	INFO	Stopped listening on port 52241
+Dynamically enable window occlusion 1
+1695587690272	geckodriver	INFO	Listening on 127.0.0.1:52284
+1695587693333	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (Macintosh; Intel ... 5" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileoOiFPg"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695587693518	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695587693599	Marionette	INFO	Listening on port 52294
+WebDriver BiDi listening on ws://127.0.0.1:52285
+Read port: 52294
+1695587693795	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52285/devtools/browser/f0257494-b40c-499c-8182-24a8895b758c
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+1695587699000	Marionette	INFO	Stopped listening on port 52294
+Dynamically enable window occlusion 1
+1695587707993	geckodriver	INFO	Listening on 127.0.0.1:52341
+1695587711050	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (Macintosh; Intel ... 2" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofiletoF4vt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695587711232	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695587711312	Marionette	INFO	Listening on port 52351
+WebDriver BiDi listening on ws://127.0.0.1:52342
+Read port: 52351
+1695587711593	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52342/devtools/browser/ab91e640-346d-478e-a57e-41346a9d296f
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+1695587722130	Marionette	INFO	Stopped listening on port 52351
+Dynamically enable window occlusion 1
+1695587723783	geckodriver	INFO	Listening on 127.0.0.1:52396
+1695587726851	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (Windows NT 10.0; ... 7" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileZNfCyc"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695587727343	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695587727423	Marionette	INFO	Listening on port 52406
+WebDriver BiDi listening on ws://127.0.0.1:52397
+Read port: 52406
+1695587728022	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52397/devtools/browser/edf41bc5-a14e-4719-8df0-6f74c71b7039
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+1695587741976	Marionette	INFO	Stopped listening on port 52406
+Dynamically enable window occlusion 1
+1695587836860	geckodriver	INFO	Listening on 127.0.0.1:52494
+1695587839910	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--user-agent=Mozilla/5.0 (X11; Linux x86_6 ... 5" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\joaoh\\AppData\\Local\\Temp\\rust_mozprofileQD8ADR"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1695587840094	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-user-agent"
+1695587840174	Marionette	INFO	Listening on port 52503
+WebDriver BiDi listening on ws://127.0.0.1:52495
+Read port: 52503
+1695587841055	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:52495/devtools/browser/28a24792-308b-41b5-bad9-b93ac04ea6b4
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+console.error: (new TypeError("lazy.AsyncShutdown.profileBeforeChange is undefined", "resource://services-settings/Database.sys.mjs", 593))
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://matricula.ufabc.edu.br."
+JavaScript error: https://matricula.ufabc.edu.br/javascripts/carregamento.js?1679946169, line 106: TypeError: $(...)[0] is undefined
+console.error: ({})
+1695587851666	Marionette	INFO	Stopped listening on port 52503
+Dynamically enable window occlusion 1
